@@ -1,0 +1,23 @@
+# Copy to worker/.dev.vars for local Worker development. Do not commit real values.
+OPENROUTER_API_KEY=sk-or-v1-...
+OPENROUTER_DEFAULT_MODEL=openai/gpt-oss-120b:free
+TURNSTILE_SITE_KEY=
+TURNSTILE_SECRET_KEY=
+REQUIRE_TURNSTILE=false
+DAILY_CHAT_LIMIT=50
+DAILY_MODE_LIMIT=30
+DAILY_IMAGE_LIMIT=6
+DAILY_PDF_LIMIT=5
+SUPPORT_EMAIL=support@example.com
+CANVAS_BETA=true
+
+GOOGLE_CLIENT_ID=...
+GOOGLE_CLIENT_SECRET=...
+
+GITHUB_CLIENT_ID=...
+GITHUB_CLIENT_SECRET=...
+
+# Local override if you want OAuth to return to the local Qwik dev server.
+PUBLIC_ORIGIN=http://127.0.0.1:5173
+API_PUBLIC_ORIGIN=http://127.0.0.1:8787
+ALLOWED_ORIGIN=http://127.0.0.1:5173
