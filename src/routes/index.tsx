@@ -590,9 +590,9 @@ body.tr-mode .lt { display: inline; }
 .logo-ai-label { color:#4ade80; font-weight:700; letter-spacing:.22em; font-size:10px; }
 
 /* TICKER */
-.ticker-wrap     { display:flex; align-items:center; gap:16px; margin-top:48px; border-top:1px solid #1e2130; border-bottom:1px solid #1e2130; padding:13px 0; overflow:hidden; }
+.ticker-wrap     { display:flex; align-items:center; gap:16px; margin-top:48px; border-top:1px solid #1e2130; border-bottom:1px solid #1e2130; padding:13px 0; overflow:hidden; min-width:0; max-width:100%; }
 .ticker-label    { font-size:10px; font-family:var(--font-mono); color:#444d6b; letter-spacing:.12em; text-transform:uppercase; flex-shrink:0; }
-.ticker-overflow { flex:1; overflow:hidden; }
+.ticker-overflow { flex:1; overflow:hidden; min-width:0; }
 .ticker-track    { display:flex; gap:8px; width:max-content; animation:marquee 30s linear infinite; }
 .t-chip {
   display:inline-flex; align-items:center; padding:4px 12px; border-radius:3px;
@@ -731,6 +731,8 @@ body.tr-mode .lt { display: inline; }
 @keyframes barPulse { 0%,100%{transform:scaleY(.55);opacity:.5} 50%{transform:scaleY(1);opacity:1} }
 
 /* RESPONSIVE */
+html, body { overflow-x: hidden; max-width: 100vw; }
+
 @media (max-width:900px) {
   .modes-grid { grid-template-columns:repeat(2,1fr); }
   .stack-card { flex-direction:column; }
